@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ÚtilHub - Herramientas útiles en un solo lugar">
+    <title>ÚtilHub | Todo lo útil en un solo lugar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FONDO DECORATIVO -->
+    <div class="fondo">
+        <div class="luz luz1"></div>
+        <div class="luz luz2"></div>
+        <div class="luz luz3"></div>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <header>
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <span>Útil<span>Hub</span></span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#herramientas">Herramientas</a>
+            <a href="#estudio">Estudio</a>
+            <a href="#utilidades">Utilidades</a>
+        </nav>
+
+        <button class="google-btn" onclick="iniciarGoogle()">
+            <span>G</span> Iniciar sesión
+        </button>
+    </header>
+
+
+    <!-- INICIO -->
+    <main id="inicio">
+
+        <section class="hero">
+
+            <div class="hero-contenido">
+
+                <div class="etiqueta">
+                    ✨ TODO LO ÚTIL EN UN SOLO LUGAR
+                </div>
+
+                <h1>
+                    Bienvenido a
+                    <strong>Útil<span>Hub</span></strong>
+                </h1>
+
+                <p>
+                    Herramientas sencillas para estudiar,
+                    organizarte, calcular, crear y resolver
+                    tus necesidades del día a día.
+                </p>
+
+                <div class="buscador">
+                    <span>⌕</span>
+                    <input
+                        type="text"
+                        id="buscador"
+                        placeholder="¿Qué herramienta necesitas?"
+                        oninput="buscarHerramienta()"
+                    >
+                    <button onclick="buscarHerramienta()">Buscar</button>
+                </div>
+
+                <div class="hero-botones">
+                    <a href="#herramientas" class="btn-principal">
+                        Explorar herramientas →
+                    </a>
+
+                    <a href="#estudio" class="btn-secundario">
+                        Para estudiar
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- ELEMENTO VISUAL -->
+            <div class="hero-visual">
+
+                <div class="orb">
+                    <div class="orb-centro">✦</div>
+                </div>
+
+                <div class="mini-card card-a">
+                    ⚡ Rápido
+                </div>
+
+                <div class="mini-card card-b">
+                    🧠 Inteligente
+                </div>
+
+                <div class="mini-card card-c">
+                    🔧 Útil
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HERRAMIENTAS -->
+        <section id="herramientas" class="seccion">
+
+            <div class="titulo-seccion">
+                <div>
+                    <span class="mini-titulo">DESCUBRE</span>
+                    <h2>Herramientas útiles</h2>
+                    <p>Elige una herramienta y comienza a utilizarla.</p>
+                </div>
+
+                <div class="contador">
+                    <strong>20</strong>
+                    herramientas
+                </div>
+            </div>
+
+
+            <div class="grid-herramientas">
+
+                <article class="herramienta" data-nombre="calculadora">
+                    <div class="icono azul">🧮</div>
+                    <div>
+                        <h3>Calculadora</h3>
+                        <p>Realiza operaciones rápidamente.</p>
+                    </div>
+                    <button onclick="calculadora()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="conversor unidades">
+                    <div class="icono morado">⇄</div>
+                    <div>
+                        <h3>Conversor de unidades</h3>
+                        <p>Convierte diferentes medidas.</p>
+                    </div>
+                    <button onclick="conversor()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="porcentajes">
+                    <div class="icono verde">%</div>
+                    <div>
+                        <h3>Porcentajes</h3>
+                        <p>Calcula porcentajes fácilmente.</p>
+                    </div>
+                    <button onclick="porcentajes()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="descuentos">
+                    <div class="icono naranja">🏷️</div>
+                    <div>
+                        <h3>Descuentos</h3>
+                        <p>Calcula precios con descuento.</p>
+                    </div>
+                    <button onclick="descuentos()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="contador dias">
+                    <div class="icono celeste">📅</div>
+                    <div>
+                        <h3>Contador de días</h3>
+                        <p>Calcula la diferencia entre fechas.</p>
+                    </div>
+                    <button onclick="contadorDias()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="temperatura">
+                    <div class="icono rojo">🌡️</div>
+                    <div>
+                        <h3>Temperatura</h3>
+                        <p>Convierte temperaturas.</p>
+                    </div>
+                    <button onclick="temperatura()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="peso">
+                    <div class="icono amarillo">⚖️</div>
+                    <div>
+                        <h3>Conversor de peso</h3>
+                        <p>Convierte kg, libras y más.</p>
+                    </div>
+                    <button onclick="peso()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="distancia">
+                    <div class="icono azul">📏</div>
+                    <div>
+                        <h3>Distancia</h3>
+                        <p>Convierte diferentes distancias.</p>
+                    </div>
+                    <button onclick="distancia()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="temporizador">
+                    <div class="icono morado">⏱️</div>
+                    <div>
+                        <h3>Temporizador</h3>
+                        <p>Cuenta regresiva para tus tareas.</p>
+                    </div>
+                    <button onclick="temporizador()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="cronometro">
+                    <div class="icono naranja">⏲️</div>
+                    <div>
+                        <h3>Cronómetro</h3>
+                        <p>Mide el tiempo con precisión.</p>
+                    </div>
+                    <button onclick="cronometro()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="notas">
+                    <div class="icono verde">📝</div>
+                    <div>
+                        <h3>Notas</h3>
+                        <p>Guarda tus ideas importantes.</p>
+                    </div>
+                    <button onclick="notas()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="tareas">
+                    <div class="icono verde">✓</div>
+                    <div>
+                        <h3>Lista de tareas</h3>
+                        <p>Organiza tus pendientes.</p>
+                    </div>
+                    <button onclick="tareas()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="compras">
+                    <div class="icono amarillo">🛒</div>
+                    <div>
+                        <h3>Lista de compras</h3>
+                        <p>Organiza lo que necesitas comprar.</p>
+                    </div>
+                    <button onclick="compras()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="password contraseña">
+                    <div class="icono rojo">🔐</div>
+                    <div>
+                        <h3>Contraseñas</h3>
+                        <p>Genera contraseñas aleatorias.</p>
+                    </div>
+                    <button onclick="password()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="qr codigo qr">
+                    <div class="icono celeste">▦</div>
+                    <div>
+                        <h3>Código QR</h3>
+                        <p>Genera códigos QR rápidamente.</p>
+                    </div>
+                    <button onclick="qr()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="numero aleatorio">
+                    <div class="icono morado">🎲</div>
+                    <div>
+                        <h3>Número aleatorio</h3>
+                        <p>Obtén un número al azar.</p>
+                    </div>
+                    <button onclick="numeroAleatorio()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="dado">
+                    <div class="icono naranja">🎲</div>
+                    <div>
+                        <h3>Dado</h3>
+                        <p>Lanza un dado virtual.</p>
+                    </div>
+                    <button onclick="dado()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="diccionario">
+                    <div class="icono azul">📖</div>
+                    <div>
+                        <h3>Diccionario</h3>
+                        <p>Consulta significados de palabras.</p>
+                    </div>
+                    <button onclick="diccionario()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="estudio organizador">
+                    <div class="icono verde">🎓</div>
+                    <div>
+                        <h3>Organizador de estudio</h3>
+                        <p>Organiza tus sesiones de estudio.</p>
+                    </div>
+                    <button onclick="estudio()">→</button>
+                </article>
+
+
+                <article class="herramienta" data-nombre="consejos">
+                    <div class="icono amarillo">💡</div>
+                    <div>
+                        <h3>Consejos</h3>
+                        <p>Ideas para mejorar tu productividad.</p>
+                    </div>
+                    <button onclick="consejos()">→</button>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTUDIO -->
+        <section id="estudio" class="zona-especial">
+
+            <div>
+                <span class="mini-titulo">MODO ESTUDIANTE</span>
+
+                <h2>Aprende y organízate mejor.</h2>
+
+                <p>
+                    ÚtilHub reúne herramientas que pueden ayudarte
+                    a estudiar, organizar tus actividades y aprovechar
+                    mejor tu tiempo.
+                </p>
+
+                <button onclick="estudio()" class="btn-principal">
+                    Abrir organizador →
+                </button>
+            </div>
+
+            <div class="zona-icono">
+                🎓
+            </div>
+
+        </section>
+
+
+        <!-- UTILIDADES -->
+        <section id="utilidades" class="seccion">
+
+            <div class="titulo-seccion">
+                <div>
+                    <span class="mini-titulo">ÚTIL PARA TODOS</span>
+                    <h2>Haz más cada día</h2>
+                    <p>Pequeñas herramientas que pueden hacer una gran diferencia.</p>
+                </div>
+            </div>
+
+            <div class="beneficios">
+
+                <div>
+                    <span>⚡</span>
+                    <h3>Rápido</h3>
+                    <p>Accede a tus herramientas en segundos.</p>
+                </div>
+
+                <div>
+                    <span>🧩</span>
+                    <h3>Sencillo</h3>
+                    <p>Diseñado para que cualquiera pueda utilizarlo.</p>
+                </div>
+
+                <div>
+                    <span>🌎</span>
+                    <h3>Para todos</h3>
+                    <p>Útil para estudiantes y para la vida diaria.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+
+        <div class="modal-contenido">
+
+            <button class="cerrar" onclick="cerrarModal()">×</button>
+
+            <div id="contenidoModal"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <div class="footer-logo">
+            ✦ Útil<span>Hub</span>
+        </div>
+
+        <p>
+            © 2026 ÚtilHub · Herramientas útiles en un solo lugar.
+        </p>
+
+        <div class="footer-links">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Contacto</a>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
